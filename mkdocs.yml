@@ -1,0 +1,70 @@
+site_name: Mobile System Design
+site_description: Worked case studies for mobile system design interviews and real projects, with diagrams, data models, APIs, failure modes and trade-offs.
+site_url: https://chandrachaan.github.io/mobile-system-design/
+site_author: Chandra ObulaReddy
+repo_url: https://github.com/ChandraChaan/mobile-system-design
+repo_name: ChandraChaan/mobile-system-design
+edit_uri: edit/main/docs/
+copyright: MIT licensed · by <a href="https://chandrachaan.com">Chandra ObulaReddy</a>
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: green
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: green
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Light mode
+  features:
+    - navigation.sections
+    - navigation.footer
+    - navigation.top
+    - search.suggest
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+
+nav:
+  - Home: index.md
+  - Start here:
+      - The framework: framework.md
+      - Building blocks: building-blocks.md
+      - Cheat sheet: cheatsheet.md
+  - Case studies:
+      - UPI payments app: case-studies/upi-payments-app.md
+      - Wearable health-data sync: case-studies/wearable-health-sync.md
+      - Offline-first chat: case-studies/offline-first-chat.md
+      - Infinite news feed: case-studies/news-feed.md
+      - Live ride tracking: case-studies/live-ride-tracking.md
+      - Resumable video upload: case-studies/resumable-video-upload.md
+      - Feature flags and rollouts: case-studies/feature-flags-and-rollouts.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+validation:
+  links:
+    not_found: warn
+    anchors: warn
+    absolute_links: info
+    unrecognized_links: warn
